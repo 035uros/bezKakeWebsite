@@ -1,16 +1,273 @@
-# React + Vite
+# 🐶 Bez Kake
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive React website for promoting dog training services and allowing customers to contact the trainer directly through a contact form.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Responsive design
+* Modern user interface
+* Service presentation section
+* Image gallery
+* Contact information section
+* Contact form
+* Email sending functionality powered by EmailJS
+* Success and error notifications
+* Built with React and Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* CSS
+* React Icons
+* EmailJS
+
+---
+
+# Getting Started
+
+## Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/bezKakeWebsite.git
+cd bezKakeWebsite
+```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Production Build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+The generated files will be located inside:
+
+```
+dist/
+```
+
+---
+
+# Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Services.jsx
+│   ├── Gallery.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+│
+├── assets/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# Contact Form
+
+The contact form uses **EmailJS**, allowing users to send messages directly to your email address without requiring a backend server.
+
+---
+
+# EmailJS Setup
+
+## 1. Create an account
+
+Create an account at:
+
+https://www.emailjs.com/
+
+---
+
+## 2. Create an Email Service
+
+Connect your email provider (Gmail, Outlook, etc.) and create a service.
+
+You will receive a:
+
+* Service ID
+
+Example:
+
+```
+service_xxxxxx
+```
+
+---
+
+## 3. Create an Email Template
+
+Create a template and use variables matching the data sent from the React application.
+
+Example:
+
+```html
+<div>
+  <h2>New message from the website</h2>
+
+  <p><strong>Name:</strong> {{ime}}</p>
+
+  <p><strong>Phone:</strong> {{telefon}}</p>
+
+  <p><strong>Message:</strong></p>
+
+  <p>{{poruka}}</p>
+</div>
+```
+
+You will receive a:
+
+* Template ID
+
+Example:
+
+```
+template_xxxxxx
+```
+
+---
+
+## 4. Obtain the Public Key
+
+Navigate to:
+
+**Account → API Keys**
+
+Copy your:
+
+* Public Key
+
+---
+
+# Environment Variables
+
+For security reasons, sensitive values should not be hardcoded inside the source code.
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_EMAILJS_SERVICE_ID=service_xxxxxx
+VITE_EMAILJS_TEMPLATE_ID=template_xxxxxx
+VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxx
+```
+
+---
+
+# Using Environment Variables
+
+Example:
+
+```javascript
+emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  {
+    ime: formData.ime,
+    telefon: formData.telefon,
+    poruka: formData.poruka
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+);
+```
+
+---
+
+# .gitignore
+
+Add the following line to prevent exposing sensitive information:
+
+```
+.env
+```
+
+---
+
+# .env.example
+
+Change this file `.env.example` file inside the repository to `.env` and add your EmailJS keys:
+
+```env
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+
+---
+
+# Running the Project After Cloning
+
+1. Clone the repository.
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create a `.env` file based on `.env.example`.
+
+4. Start the application:
+
+```bash
+npm run dev
+```
+
+---
+
+# Future Improvements
+
+* Backend integration
+* Database support
+* Appointment scheduling
+* Admin dashboard
+* Blog section
+* WhatsApp integration
+* SEO optimization
+
+---
+
+# Author
+
+**Uroš Milošević**
+
+Master of Electrical Engineering and Computer Science
+
+Jagodina, Serbia
+
+---
+
+Built with ❤️ using React and Vite.
