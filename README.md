@@ -135,16 +135,20 @@ Create a template and use variables matching the data sent from the React applic
 Example:
 
 ```html
-<div>
-  <h2>New message from the website</h2>
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 12px">
+  <div>Nova poruka sa sajta</div>
 
-  <p><strong>Name:</strong> {{ime}}</p>
+  <div style="margin-top: 20px; padding: 15px 0; border-top: 1px dashed lightgrey;">
 
-  <p><strong>Phone:</strong> {{telefon}}</p>
+    <p><strong>Ime:</strong> {{ime}}</p>
+    <p><strong>Telefon:</strong> {{telefon}}</p>
 
-  <p><strong>Message:</strong></p>
+    <p style="margin-top: 10px;">
+      <strong>Poruka:</strong><br />
+      {{poruka}}
+    </p>
 
-  <p>{{poruka}}</p>
+  </div>
 </div>
 ```
 
