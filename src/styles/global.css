@@ -571,6 +571,95 @@ h3 {
   font-size: 0.95rem;
 }
 
+.pricing-callout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 40px;
+
+  background: #1a5c38;
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 28px 36px;
+}
+
+.pricing-callout-number {
+  font-family: var(--heading-font);
+  font-size: 2.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #a8e6c1;
+}
+
+.pricing-callout p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.pricing-callout strong {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .pricing-callout {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #25d366;
+  color: white;
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-btn svg {
+  font-size: 1.4rem;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn span {
+    display: none;
+  }
+
+  .whatsapp-btn {
+    padding: 16px;
+  }
+
+  .whatsapp-btn svg {
+    font-size: 1.6rem;
+  }
+}
+
 .faq {
   background: #f7f7f7;
 }

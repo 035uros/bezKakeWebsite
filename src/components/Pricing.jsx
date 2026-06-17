@@ -71,6 +71,14 @@ function Pricing() {
           <p>Za 2 psa: +2.000 RSD mesečno · Za 3+ psa: po dogovoru</p>
         </div>
 
+        <div className="pricing-callout">
+          <span className="pricing-callout-number">47 min</span>
+          <p>
+            Prosečan vlasnik psa sa dvorištem troši <strong>47 minuta nedeljno</strong> na
+            ono što mi radimo — za samo <strong>5.999 RSD mesečno</strong>.
+          </p>
+        </div>
+
       </div>
 
     </section>

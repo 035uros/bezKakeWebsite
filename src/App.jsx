@@ -6,6 +6,7 @@ import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <FAQ />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
