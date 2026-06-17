@@ -77,7 +77,7 @@ function Contact() {
               <FaMapMarkerAlt />
               <div>
                 <h4>Lokacija</h4>
-                <p>Kragujevac i okolina</p>
+                <p>Beograd</p>
               </div>
             </div>
           </div>

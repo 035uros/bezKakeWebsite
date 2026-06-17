@@ -26,9 +26,10 @@ function Footer() {
         </div>
 
         <div className="footer-contact">
-          <p>📍 Kragujevac i okolina</p>
+          <p>📍 Beograd</p>
           <p>📞 +381 xx xxx xxx</p>
           <p>✉️ kontakt@bezkake.rs</p>
+          <p>📸 @bezkake</p>
         </div>
 
       </div>

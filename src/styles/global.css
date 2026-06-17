@@ -549,6 +549,28 @@ h3 {
 
 }
 
+.pricing-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.pricing-notes p {
+  text-align: center;
+
+  background: #f7f7f7;
+
+  color: var(--text-light);
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+}
+
 .faq {
   background: #f7f7f7;
 }

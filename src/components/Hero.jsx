@@ -11,9 +11,9 @@ function Hero() {
         <div className="hero-text">
 
           <h1>
-            Čisto dvorište.
+            Pustite psa da bude pas.
             <br />
-            Mirna savest.
+            Mi se brinemo o ostatku.
           </h1>
 
           <p>

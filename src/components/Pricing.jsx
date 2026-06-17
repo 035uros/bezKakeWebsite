@@ -16,16 +16,15 @@ function Pricing() {
 
           <div className="price-card">
 
-            <h3>Basic</h3>
+            <h3>Starter</h3>
 
             <div className="price">
-              2.990 RSD
+              4.999 RSD
             </div>
 
             <ul>
-              <li>1 pas</li>
-              <li>Do 300m² dvorišta</li>
-              <li>4 dolaska mesečno</li>
+              <li>Na 2 nedelje</li>
+              <li>2 čišćenja mesečno</li>
             </ul>
 
           </div>
@@ -33,19 +32,19 @@ function Pricing() {
           <div className="price-card featured">
 
             <div className="popular-tag">
-              Najpopularnije
+              Najpopularniji
             </div>
 
-            <h3>Family</h3>
+            <h3>Standard</h3>
 
             <div className="price">
-              4.990 RSD
+              5.999 RSD
             </div>
 
             <ul>
-              <li>2 psa</li>
-              <li>Do 600m² dvorišta</li>
-              <li>4 dolaska mesečno</li>
+              <li>Nedeljno</li>
+              <li>4 čišćenja mesečno</li>
+              <li>40% jeftinije po poseti</li>
             </ul>
 
           </div>
@@ -55,17 +54,21 @@ function Pricing() {
             <h3>Premium</h3>
 
             <div className="price">
-              Po dogovoru
+              9.999 RSD
             </div>
 
             <ul>
-              <li>3+ psa</li>
-              <li>Velika imanja</li>
-              <li>Prilagođeni termini</li>
+              <li>2x nedeljno</li>
+              <li>8 čišćenja mesečno</li>
             </ul>
 
           </div>
 
+        </div>
+
+        <div className="pricing-notes">
+          <p>Sve cene su mesečna pretplata · Otkazujete kada želite</p>
+          <p>Za 2 psa: +2.000 RSD mesečno · Za 3+ psa: po dogovoru</p>
         </div>
 
       </div>
