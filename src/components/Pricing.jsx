@@ -1,3 +1,5 @@
+import { FaShieldAlt } from "react-icons/fa";
+
 function Pricing() {
   return (
     <section id="cenovnik" className="pricing">
@@ -10,6 +12,11 @@ function Pricing() {
           <p>
             Transparentne cene bez skrivenih troškova.
           </p>
+
+          <div className="guarantee-badge">
+            <FaShieldAlt className="guarantee-icon" />
+            <span>Otkazujete kada želite.</span>
+          </div>
         </div>
 
         <div className="pricing-grid">
@@ -67,7 +74,7 @@ function Pricing() {
         </div>
 
         <div className="pricing-notes">
-          <p>Sve cene su mesečna pretplata · Otkazujete kada želite</p>
+          <p>Sve cene su mesečna pretplata</p>
           <p>Za 2 psa: +2.000 RSD mesečno · Za 3+ psa: po dogovoru</p>
         </div>
 
@@ -75,7 +82,7 @@ function Pricing() {
           <span className="pricing-callout-number">47 min</span>
           <p>
             Prosečan vlasnik psa sa dvorištem troši <strong>47 minuta nedeljno</strong> na
-            ono što mi radimo — za samo <strong>5.999 RSD mesečno</strong>.
+            ono što mi radimo za samo <strong>5.999 RSD mesečno</strong>.
           </p>
         </div>
 

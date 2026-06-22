@@ -16,20 +16,14 @@ function Hero() {
             Mi se brinemo o ostatku.
           </h1>
 
-          <p>
-            Profesionalno uklanjanje psećeg izmeta iz privatnih
-            dvorišta. Redovni dolasci, diskretna usluga i više
-            vremena za vas i vašu porodicu.
-          </p>
-
           <div className="hero-buttons">
 
-            <a href="#cenovnik" className="btn btn-primary">
-              Cenovnik
+            <a href="#kontakt" className="btn btn-primary">
+              Prva usluga gratis — zakažite odmah
             </a>
 
-            <a href="#kontakt" className="btn btn-secondary-light">
-              Kontakt
+            <a href="#cenovnik" className="btn btn-secondary-light">
+              Cenovnik
             </a>
 
           </div>

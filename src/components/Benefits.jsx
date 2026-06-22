@@ -1,70 +1,72 @@
 import {
-  FaShieldAlt,
   FaClock,
-  FaHome,
-  FaLeaf,
+  FaHeart,
+  FaExclamationTriangle,
+  FaMedal,
+  FaCalendarCheck,
 } from "react-icons/fa";
+import { MdNotificationsActive } from "react-icons/md";
+
+const benefits = [
+  {
+    Icon: FaHeart,
+    title: "Tim ljubitelja pasa",
+    text: "I sami smo vlasnici pasa, zato razumemo svakodnevne radosti i obaveze koje oni donose.",
+  },
+  {
+    Icon: FaClock,
+    title: "Dvorište uvek spremno za goste",
+    text: "Bilo da Vam dolaze prijatelji, porodica ili komšije, dvorište je uvek uredno i spremno za uživanje. Bez neprijatnih iznenađenja i čišćenja u poslednjem trenutku.",
+  },
+  {
+    Icon: FaExclamationTriangle,
+    title: "Pseći izmet je zdravstveni rizik",
+    text: "Sadrži E. coli, parvovirus i parazite koji opstaju u tlu i do godinu dana. Redovnim uklanjanjem štitite decu, goste i Vašeg psa. Naša oprema se dezinfikuje pre i posle svakog dolaska.",
+  },
+  {
+    Icon: MdNotificationsActive,
+    title: "Bez neprijatnih mirisa u dvorištu",
+    text: "Pseći otpad je čest uzrok neprijatnih mirisa, naročito tokom toplijih meseci. Redovnim uklanjanjem održavamo dvorište čistim i prijatnim za svakodnevni boravak.",
+  },
+  {
+    Icon: FaMedal,
+    title: "Možete da računate na isti rezultat",
+    text: "Bez obzira na godišnje doba ili broj poseta, cilj je uvek isti. Svaka poseta prati isti pristup i isti standard usluge.",
+  },
+  {
+    Icon: FaCalendarCheck,
+    title: "Pouzdan servis tokom cele godine",
+    text: "Redovni dolasci u dogovorenom terminu i tim koji poznaje Vaše dvorište. Pouzdana usluga tokom cele godine, i leti i zimi."
+  },
+];
 
 function Benefits() {
   return (
     <section className="benefits">
-
       <div className="container">
 
         <div className="section-title">
           <h2>Zašto BezKake?</h2>
-
           <p>
-            Brinemo o vašem dvorištu kako biste vi mogli da uživate u njemu.
+          Naš cilj nije samo čisto dvorište, već i Vaše poverenje. Zato svakoj poseti pristupamo jednako, bez obzira na obim posla. 
           </p>
         </div>
 
         <div className="benefits-grid">
-
-          <div className="benefit-card">
-            <FaShieldAlt className="benefit-icon" />
-
-            <h3>Higijena za porodicu</h3>
-
-            <p>
-              Čist prostor za igru dece, boravak gostiju i svakodnevno uživanje.
-            </p>
-          </div>
-
-          <div className="benefit-card">
-            <FaClock className="benefit-icon" />
-
-            <h3>Više slobodnog vremena</h3>
-
-            <p>
-              Prepustite neprijatan posao nama i fokusirajte se na ono što vam je važno.
-            </p>
-          </div>
-
-          <div className="benefit-card">
-            <FaHome className="benefit-icon" />
-
-            <h3>Uvek uredno dvorište</h3>
-
-            <p>
-              Redovni dolasci garantuju da vaše dvorište ostaje čisto tokom cele godine.
-            </p>
-          </div>
-
-          <div className="benefit-card">
-            <FaLeaf className="benefit-icon" />
-
-            <h3>Diskretna usluga</h3>
-
-            <p>
-              Dolazimo, završavamo posao i ostavljamo dvorište urednim bez ometanja.
-            </p>
-          </div>
-
+          {benefits.map((b) => (
+            <div className="benefit-card" key={b.title}>
+              <div className="benefit-icon-wrap">
+                <b.Icon className="benefit-icon" />
+              </div>
+              <div className="benefit-body">
+                <h3>{b.title}</h3>
+                <p>{b.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
-
     </section>
   );
 }
