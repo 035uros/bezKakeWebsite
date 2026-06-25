@@ -1,6 +1,6 @@
 export const translations = {
   sr: {
-    howItWorks: "Kako radi",
+    howItWorks: "Kako funkcioniše",
     pricing: "Cenovnik",
     faq: "Česta pitanja",
     contact: "Kontakt",
@@ -225,7 +225,7 @@ export const translations = {
     contactSubtitle: "Javite nam se i zakažite termin",
 
     contactPhoneLabel: "Telefon",
-    contactPhone: "+381 xx xxx xxx",
+    contactPhone: "+381 60 6872772",
 
     contactEmailLabel: "Email",
     contactEmail: "kontakt@bezkake.rs",
@@ -280,28 +280,65 @@ export const translations = {
     faqCtaButton: "Contact us",
 
     faqCategories: [
-      {
+    {
         category: "Practical",
         items: [
-          {
+        {
             q: "Do I need to be home during the cleaning?",
             a: "During the first few visits, you need to be home or provide access to the yard. Once we establish trust, we can arrange permanent access so your presence is no longer required. If access is only possible through the house, someone must be present. We always notify you via WhatsApp before arrival.",
-          },
-          {
+        },
+        {
             q: "Which parts of the yard do you clean?",
-            a: "We thoroughly inspect and clean all outdoor areas where your dog spends time: lawn, gravel, paths, front and back yard, including overlooked corners. Our service covers only outdoor areas, not the interior of the house.",
-          },
+            a: "We thoroughly inspect and clean all outdoor areas where your dog spends time, including the lawn, gravel, pathways, front and back yard, as well as corners that are easy to overlook. Our service is intended exclusively for yard cleaning and does not include the inside of your home.",
+        },
+        {
+            q: "What if it rains or the weather is bad?",
+            a: "We operate all year round, so rain, snow, sleet, and high temperatures usually do not prevent us from completing your scheduled visit. We only reschedule in the event of extreme weather conditions that affect safety or make quality cleaning impossible. If that happens, we will notify you in advance and arrange the next available appointment at no additional cost.",
+        },
+        {
+            q: "Which days and at what times do you provide the service?",
+            a: "We operate Monday through Saturday, from early morning until late afternoon, so you can enjoy your evenings with your family. We are closed on Sundays.",
+        },
+        {
+            q: "Can my dog stay in the yard during the cleaning?",
+            a: "We are dog owners and genuine animal lovers ourselves. However, for the safety of both your dog and our team, we kindly ask that your dog remains inside the house or in a separate secure area of the yard during the cleaning. This policy applies to all dogs so we can work thoroughly and safely. We always send you a WhatsApp notification before arrival so you'll have enough time to prepare.",
+        },
+        {
+            q: "How long does a typical cleaning take?",
+            a: "Most yards are cleaned within 15 to 30 minutes, depending on their size and the number of dogs. This includes inspecting and cleaning all outdoor areas where your dog spends time.",
+        },
+        {
+            q: "What do you do with the collected dog waste?",
+            a: "We place all collected waste into securely sealed bags and dispose of it in the appropriate municipal waste container. Nothing is left behind in your yard, leaving it clean and tidy after every visit.",
+        },
         ],
-      },
-      {
+    },
+    {
         category: "Pricing",
         items: [
-          {
+        {
             q: "How does the first free service work?",
-            a: "The first visit is free when you choose a subscription plan. After that, we continue regular visits according to your selected package.",
-          },
+            a: "Your first visit is completely free when you choose one of our regular subscription packages. After the first visit, we continue according to your selected schedule. This gives you the opportunity to experience the quality of our service before paying.",
+        },
+        {
+            q: "I have two dogs. How is the pricing calculated?",
+            a: "For households with two dogs, an additional 2,000 RSD per month is added to the selected package. For three or more dogs, we prepare a customized quote based on the size of your yard, the number of visits, and your specific needs.",
+        },
         ],
-      },
+    },
+    {
+        category: "Trust & Guarantee",
+        items: [
+        {
+            q: "Can I cancel the service at any time?",
+            a: "Yes. You can cancel your subscription at any time without penalties or long-term contracts. Simply send us a message via WhatsApp. We believe trust and customer loyalty should be earned through the quality of every visit—not through complicated contracts.",
+        },
+        {
+            q: "What if I'm not satisfied with the service?",
+            a: "We stand behind the quality of our work. If you're not satisfied, we'll repeat the visit at our expense or give you a full refund.",
+        },
+        ],
+    },
     ],
     howItWorksTitle: "How it works?",
     howItWorksSubtitle:
@@ -451,7 +488,7 @@ export const translations = {
     contactSubtitle: "Get in touch and book your appointment",
 
     contactPhoneLabel: "Phone",
-    contactPhone: "+381 xx xxx xxx",
+    contactPhone: "+381 60 6872772",
 
     contactEmailLabel: "Email",
     contactEmail: "contact@bezkake.rs",

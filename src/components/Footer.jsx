@@ -1,5 +1,11 @@
 import { useContext } from "react";
 import logo from "../assets/logo.png";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaInstagram,
+} from "react-icons/fa";
 
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
@@ -30,12 +36,37 @@ function Footer() {
           <a href="#kontakt">{t.footerLinks.contact}</a>
         </div>
 
-        <div className="footer-contact">
-          <p>📍 {t.footerLocation}</p>
-          <p>📞 {t.footerPhone}</p>
-          <p>✉️ {t.footerEmail}</p>
-          <p>📸 {t.footerSocial}</p>
-        </div>
+                <div className="footer-contact">
+
+        <p>
+          <FaMapMarkerAlt className="footer-icon" />
+          <span>{t.footerLocation}</span>
+        </p>
+
+        <p>
+          <FaPhone className="footer-icon" />
+          <a href="tel:+{t.footerPhone}">{t.footerPhone}</a>
+        </p>
+
+        <p>
+          <FaEnvelope className="footer-icon" />
+          <a href="mailto:kontakt@bezkake.rs">
+            {t.footerEmail}
+          </a>
+        </p>
+
+        <p>
+          <FaInstagram className="footer-icon" />
+          <a
+            href="https://instagram.com/bezkake"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.footerSocial}
+          </a>
+        </p>
+
+      </div>
 
       </div>
 

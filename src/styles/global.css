@@ -1222,7 +1222,17 @@ h3 {
 }
 
 .footer-contact p {
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.footer-icon {
+  font-size: 18px;
+  color: var(--primary-color);
+  flex-shrink: 0;
 }
 
 .footer-bottom {
