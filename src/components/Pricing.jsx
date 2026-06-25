@@ -1,93 +1,71 @@
+import { useContext } from "react";
 import { FaShieldAlt } from "react-icons/fa";
 
+import { LanguageContext } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
+
 function Pricing() {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
   return (
     <section id="cenovnik" className="pricing">
-
       <div className="container">
 
         <div className="section-title">
-          <h2>Cenovnik</h2>
+          <h2>{t.pricingTitle}</h2>
 
-          <p>
-            Transparentne cene bez skrivenih troškova.
-          </p>
+          <p>{t.pricingSubtitle}</p>
 
           <div className="guarantee-badge">
             <FaShieldAlt className="guarantee-icon" />
-            <span>Otkazujete kada želite.</span>
+            <span>{t.pricingBadge}</span>
           </div>
         </div>
 
         <div className="pricing-grid">
 
-          <div className="price-card">
+          {t.pricingPlans.map((plan) => (
+            <div
+              key={plan.name}
+              className={`price-card ${plan.featured ? "featured" : ""}`}
+            >
+              {plan.popularTag && (
+                <div className="popular-tag">{plan.popularTag}</div>
+              )}
 
-            <h3>Starter</h3>
+              <h3>{plan.name}</h3>
 
-            <div className="price">
-              4.999 RSD
+              <div className="price">{plan.price}</div>
+
+              <ul>
+                {plan.features.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
+              </ul>
             </div>
-
-            <ul>
-              <li>Na 2 nedelje</li>
-              <li>2 čišćenja mesečno</li>
-            </ul>
-
-          </div>
-
-          <div className="price-card featured">
-
-            <div className="popular-tag">
-              Najpopularniji
-            </div>
-
-            <h3>Standard</h3>
-
-            <div className="price">
-              5.999 RSD
-            </div>
-
-            <ul>
-              <li>Nedeljno</li>
-              <li>4 čišćenja mesečno</li>
-              <li>40% jeftinije po poseti</li>
-            </ul>
-
-          </div>
-
-          <div className="price-card">
-
-            <h3>Premium</h3>
-
-            <div className="price">
-              9.999 RSD
-            </div>
-
-            <ul>
-              <li>2x nedeljno</li>
-              <li>8 čišćenja mesečno</li>
-            </ul>
-
-          </div>
+          ))}
 
         </div>
 
         <div className="pricing-notes">
-          <p>Sve cene su mesečna pretplata</p>
-          <p>Za 2 psa: +2.000 RSD mesečno · Za 3+ psa: po dogovoru</p>
+          {t.pricingNotes.map((n, i) => (
+            <p key={i}>{n}</p>
+          ))}
         </div>
 
         <div className="pricing-callout">
-          <span className="pricing-callout-number">47 min</span>
+          <span className="pricing-callout-number">{t.pricingCalloutNumber}</span>
+
           <p>
-            Prosečan vlasnik psa sa dvorištem troši <strong>47 minuta nedeljno</strong> na
-            ono što mi radimo za samo <strong>5.999 RSD mesečno</strong>.
+            {t.pricingCalloutTextParts.before}
+            <strong>{t.pricingCalloutTextParts.highlight1}</strong>
+            {t.pricingCalloutTextParts.middle}
+            <strong>{t.pricingCalloutTextParts.highlight2}</strong>
           </p>
         </div>
 
       </div>
-
     </section>
   );
 }

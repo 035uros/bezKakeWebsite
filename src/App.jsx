@@ -7,6 +7,8 @@ import Referral from "./components/Referral";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
@@ -22,6 +24,13 @@ function App() {
       <Contact />
       <Footer />
       <WhatsAppButton />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        newestOnTop
+        pauseOnHover
+      />
     </>
   );
 }

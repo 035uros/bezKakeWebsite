@@ -1,31 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FaUserFriends, FaTimes } from "react-icons/fa";
 
-const steps = [
-  {
-    number: "01",
-    title: "Postani deo BezKake porodice",
-    text: "Zakaži prvu uslugu i počni da koristiš servis. Sve počinje od tebe.",
-  },
-  {
-    number: "02",
-    title: "Preporuči prijatelju ili komšiji",
-    text: "Podeli naš kontakt sa nekim ko ima psa i dvorište. Kada se javi, neka pomene tvoje ime.",
-  },
-  {
-    number: "03",
-    title: "Prijatelj postaje klijent",
-    text: "Čim tvoj prijatelj zakaže prvu uslugu, oboje ste kvalifikovani za nagradu.",
-  },
-  {
-    number: "04",
-    title: "Oboje dobijate nagradu",
-    text: "Ti dobijaš 1000 RSD popusta na sledeći račun. Tvoj prijatelj dobija prvu uslugu gratis. Bez ograničenja, preporuči koliko god želiš.",
-  },
-];
+import { LanguageContext } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 
 function Referral() {
   const [open, setOpen] = useState(false);
+
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
 
   return (
     <>
@@ -34,17 +17,19 @@ function Referral() {
 
           <div className="referral-left">
             <FaUserFriends className="referral-icon" />
+
             <div>
-              <h3>Preporuči BezKake prijatelju</h3>
+              <h3>{t.referralTitle}</h3>
               <p>
-                Za svakog prijatelja, komšiju, poznanika kojeg preporučiš dobijaš <strong>1000 RSD popusta</strong> na
-                sledeći račun. 
+                {t.referralTextBefore}
+                <strong>{t.referralHighlight}</strong>
+                {t.referralTextAfter}
               </p>
             </div>
           </div>
 
           <button className="btn referral-btn" onClick={() => setOpen(true)}>
-            Saznaj više
+            {t.referralButton}
           </button>
 
         </div>
@@ -60,14 +45,15 @@ function Referral() {
 
             <div className="modal-header">
               <FaUserFriends className="modal-icon" />
-              <h2>Kako funkcioniše preporuka?</h2>
-              <p>Postani deo BezKake porodice i nagradi i sebe i prijatelje.</p>
+              <h2>{t.referralModalTitle}</h2>
+              <p>{t.referralModalSubtitle}</p>
             </div>
 
             <div className="modal-steps">
-              {steps.map((step) => (
+              {t.referralSteps.map((step) => (
                 <div key={step.number} className="modal-step">
                   <div className="modal-step-number">{step.number}</div>
+
                   <div>
                     <h4>{step.title}</h4>
                     <p>{step.text}</p>
@@ -76,8 +62,12 @@ function Referral() {
               ))}
             </div>
 
-            <a href="#kontakt" className="btn referral-btn modal-cta" onClick={() => setOpen(false)}>
-              Zakaži svoju prvu uslugu
+            <a
+              href="#kontakt"
+              className="btn referral-btn modal-cta"
+              onClick={() => setOpen(false)}
+            >
+              {t.referralCta}
             </a>
 
           </div>

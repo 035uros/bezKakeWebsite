@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
-
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  
+  const { language, setLanguage } = useContext(LanguageContext);
+  const t = translations[language];
+
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -26,23 +32,38 @@ function Navbar() {
         <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
 
           <a href="#kako-radi" onClick={closeMenu}>
-            Kako radi
+            {t.howItWorks}
           </a>
 
           <a href="#cenovnik" onClick={closeMenu}>
-            Cenovnik
+            {t.pricing}
           </a>
 
           <a href="#faq" onClick={closeMenu}>
-            Česta pitanja
+            {t.faq}
           </a>
 
           <a href="#kontakt" onClick={closeMenu}>
-            Kontakt
+            {t.contact}
           </a>
 
         </nav>
 
+        <div className="language-switch">
+          <button
+            onClick={() => setLanguage("sr")}
+            className={language === "sr" ? "active" : ""}
+          >
+            SR
+          </button>
+
+          <button
+            onClick={() => setLanguage("en")}
+            className={language === "en" ? "active" : ""}
+          >
+            EN
+          </button>
+        </div>
         <button
           className="mobile-menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
