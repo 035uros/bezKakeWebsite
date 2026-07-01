@@ -3,18 +3,25 @@ import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 
 import logo from "../assets/logo.png";
-import heroBg from "../assets/hero-bg.jpg";
+import heroVideo from "../assets/hero-video.mp4";
 
 function Hero() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
 
   return (
-    <section
-      id="hero"
-      className="hero"
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
+    <section id="hero" className="hero">
+
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+
       <div className="hero-overlay" />
 
       <div className="container hero-content">
@@ -41,7 +48,12 @@ function Hero() {
         </div>
       </div>
 
-      <img src={logo} alt="BezKake" className="hero-corner-logo" />
+      <img
+        src={logo}
+        alt="BezKake"
+        className="hero-corner-logo"
+      />
+
     </section>
   );
 }

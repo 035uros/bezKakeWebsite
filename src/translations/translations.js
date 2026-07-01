@@ -228,7 +228,7 @@ export const translations = {
     contactPhone: "+381 60 6872772",
 
     contactEmailLabel: "Email",
-    contactEmail: "kontakt@bezkake.rs",
+    contactEmail: "bezkake@gmail.com",
 
     contactLocationLabel: "Lokacija",
     contactLocation: "Beograd",
@@ -253,7 +253,7 @@ export const translations = {
 
     footerLocation: "Beograd",
     footerPhone: "+381 60 6872772",
-    footerEmail: "kontakt@bezkake.rs",
+    footerEmail: "bezkake@gmail.com",
     footerSocial: "@bezkake",
 
     footerRights: "Sva prava zadržana.",
@@ -491,7 +491,7 @@ export const translations = {
     contactPhone: "+381 60 6872772",
 
     contactEmailLabel: "Email",
-    contactEmail: "contact@bezkake.rs",
+    contactEmail: "bezkake@gmail.com",
 
     contactLocationLabel: "Location",
     contactLocation: "Belgrade",
@@ -516,7 +516,7 @@ export const translations = {
 
     footerLocation: "Belgrade",
     footerPhone: "+381 60 6872772",
-    footerEmail: "contact@bezkake.rs",
+    footerEmail: "bezkake@gmail.coms",
     footerSocial: "@bezkake",
 
     footerRights: "All rights reserved.",
