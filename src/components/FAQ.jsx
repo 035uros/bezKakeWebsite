@@ -1,63 +1,73 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
-const faqData = [
-  {
-    q: "Da li moram biti kod kuće tokom čišćenja?",
-    a: "Ne. Većina klijenata nije kod kuće. Dolazimo, obavimo posao i zatvorimo kapiju.",
-  },
-  {
-    q: "Da li radite i vikendom?",
-    a: "Da, termini su fleksibilni i dogovaraju se unapred.",
-  },
-  {
-    q: "Šta ako pada kiša?",
-    a: "U slučaju lošeg vremena, termin se pomera bez dodatnih troškova.",
-  },
-  {
-    q: "Da li je usluga bezbedna za kućne ljubimce?",
-    a: "Apsolutno. Koristimo standardne higijenske procedure bez hemikalija.",
-  },
-];
+import { LanguageContext } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
 
 function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openKey, setOpenKey] = useState(null);
 
-  const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
+  const toggle = (key) => setOpenKey(openKey === key ? null : key);
 
   return (
     <section id="faq" className="faq">
-
       <div className="container">
 
         <div className="section-title">
-          <h2>FAQ</h2>
-          <p>Najčešća pitanja naših klijenata</p>
+          <h2>{t.faqTitle}</h2>
+          <p>{t.faqSubtitle}</p>
         </div>
 
-        <div className="faq-list">
+        <div className="faq-categories">
 
-          {faqData.map((item, index) => (
-            <div
-              key={index}
-              className={`faq-item ${openIndex === index ? "open" : ""}`}
-              onClick={() => toggle(index)}
-            >
-              <div className="faq-question">
-                {item.q}
-              </div>
+          {t.faqCategories.map((cat) => (
+            <div className="faq-category" key={cat.category}>
 
-              <div className="faq-answer">
-                {item.a}
+              <p className="faq-category-label">{cat.category}</p>
+
+              <div className="faq-list">
+
+                {cat.items.map((item) => {
+                  const key = `${cat.category}-${item.q}`;
+                  const isOpen = openKey === key;
+
+                  return (
+                    <div
+                      key={key}
+                      className={`faq-item ${isOpen ? "open" : ""}`}
+                      onClick={() => toggle(key)}
+                    >
+                      <div className="faq-question">
+                        <span>{item.q}</span>
+                        {isOpen ? (
+                          <FaMinus className="faq-icon" />
+                        ) : (
+                          <FaPlus className="faq-icon" />
+                        )}
+                      </div>
+
+                      <div className="faq-answer">{item.a}</div>
+                    </div>
+                  );
+                })}
+
               </div>
             </div>
           ))}
 
         </div>
 
-      </div>
+        <div className="faq-cta">
+          <p>{t.faqCtaText}</p>
+          <a href="#kontakt" className="btn faq-cta-btn">
+            {t.faqCtaButton}
+          </a>
+        </div>
 
+      </div>
     </section>
   );
 }

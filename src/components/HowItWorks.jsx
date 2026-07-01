@@ -1,55 +1,57 @@
-import { FaCalendarCheck, FaDog, FaCheckCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  MdNotificationsActive,
+  MdCleaningServices,
+  MdPhotoCamera,
+} from "react-icons/md";
+
+import { LanguageContext } from "../context/LanguageContext";
+import { translations } from "../translations/translations";
+
+const iconMap = {
+  whatsapp: FaWhatsapp,
+  notify: MdNotificationsActive,
+  cleaning: MdCleaningServices,
+  photo: MdPhotoCamera,
+};
 
 function HowItWorks() {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
   return (
     <section id="kako-radi" className="how-it-works">
-
       <div className="container">
 
         <div className="section-title">
-          <h2>Kako funkcioniše?</h2>
-
-          <p>
-            Jednostavno, pouzdano i bez dodatnih obaveza za vas.
-          </p>
+          <h2>{t.howItWorksTitle}</h2>
+          <p>{t.howItWorksSubtitle}</p>
         </div>
 
         <div className="steps">
+          {t.howItWorksSteps.map((step, i) => {
+            const Icon = iconMap[step.icon];
 
-          <div className="step-card">
-            <FaCalendarCheck className="step-icon" />
+            return (
+              <div className="step-card" key={step.number}>
+                <div className="step-top">
+                  <span className="step-number">{step.number}</span>
+                  {i < t.howItWorksSteps.length - 1 && (
+                    <span className="step-connector" />
+                  )}
+                </div>
 
-            <h3>Zakažite uslugu</h3>
+                <Icon className="step-icon" />
 
-            <p>
-              Kontaktirajte nas i dogovaramo termin koji vam odgovara.
-            </p>
-          </div>
-
-          <div className="step-card">
-            <FaDog className="step-icon" />
-
-            <h3>Mi dolazimo</h3>
-
-            <p>
-              Temeljno čistimo dvorište i uklanjamo sav pseći izmet.
-            </p>
-          </div>
-
-          <div className="step-card">
-            <FaCheckCircle className="step-icon" />
-
-            <h3>Uživajte</h3>
-
-            <p>
-              Čisto dvorište spremno za porodicu, goste i ljubimce.
-            </p>
-          </div>
-
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            );
+          })}
         </div>
 
       </div>
-
     </section>
   );
 }
