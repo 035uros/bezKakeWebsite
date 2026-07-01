@@ -254,7 +254,7 @@ export const translations = {
     footerLocation: "Beograd",
     footerPhone: "+381 60 6872772",
     footerEmail: "bezkake@gmail.com",
-    footerSocial: "@bezkake",
+    footerSocial: "@bezkake.rs",
 
     footerRights: "Sva prava zadržana.",
     whatsappText: "Piši nam",
@@ -517,7 +517,7 @@ export const translations = {
     footerLocation: "Belgrade",
     footerPhone: "+381 60 6872772",
     footerEmail: "bezkake@gmail.coms",
-    footerSocial: "@bezkake",
+    footerSocial: "@bezkake.rs",
 
     footerRights: "All rights reserved.",
     whatsappText: "Message us",
