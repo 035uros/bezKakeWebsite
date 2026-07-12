@@ -3,6 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 import { getWhatsAppLink } from "../lib/whatsapp";
+import { fbStandard } from "../lib/pixel";
 
 import logo from "../assets/logo.png";
 import heroVideo from "../assets/hero-video.mp4";
@@ -44,6 +45,7 @@ function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="start-cta-btn"
+            onClick={() => fbStandard("Contact", { content_name: "homepage_hero" })}
           >
             <FaWhatsapp /> {t.heroPrimaryBtn}
           </a>

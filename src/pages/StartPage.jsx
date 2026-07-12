@@ -17,6 +17,7 @@ import StartSurvey from "../components/StartSurvey";
 import { VARIANTS, DEFAULT_VARIANT, getVariantKey } from "../data/startVariants";
 import { packages } from "../data/packages";
 import { getWhatsAppLink } from "../lib/whatsapp";
+import { fbStandard } from "../lib/pixel";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 
@@ -168,7 +169,13 @@ function StartPage() {
 
         <p className="start-offer-note">{offerText.note}</p>
 
-        <a href={getWhatsAppLink(language)} target="_blank" rel="noopener noreferrer" className="start-cta-btn">
+        <a
+          href={getWhatsAppLink(language)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="start-cta-btn"
+          onClick={() => fbStandard("Contact", { content_name: `start_offer_${variantKey}` })}
+        >
           <FaWhatsapp /> {offerText.cta}
         </a>
       </section>
