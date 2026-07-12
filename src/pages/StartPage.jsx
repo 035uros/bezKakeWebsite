@@ -18,6 +18,7 @@ import { VARIANTS, DEFAULT_VARIANT, getVariantKey } from "../data/startVariants"
 import { packages } from "../data/packages";
 import { getWhatsAppLink } from "../lib/whatsapp";
 import { fbStandard } from "../lib/pixel";
+import { useAutoplayVideo } from "../lib/useAutoplayVideo";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 
@@ -70,6 +71,8 @@ function StartPage() {
     document.getElementById("upitnik")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const videoRef = useAutoplayVideo();
+
   return (
     <div className="start-page">
       {/* 1. Hero — full-bleed video, same treatment as the main site.
@@ -78,7 +81,7 @@ function StartPage() {
           so cold ad traffic gets message-matched, qualified, and
           routed to the right package before they chat. */}
       <section className="start-hero">
-        <video className="start-hero-video" autoPlay muted loop playsInline>
+        <video ref={videoRef} className="start-hero-video" autoPlay muted loop playsInline>
           <source src={heroVideo} type="video/mp4" />
         </video>
 

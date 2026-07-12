@@ -4,6 +4,7 @@ import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
 import { getWhatsAppLink } from "../lib/whatsapp";
 import { fbStandard } from "../lib/pixel";
+import { useAutoplayVideo } from "../lib/useAutoplayVideo";
 
 import logo from "../assets/logo.png";
 import heroVideo from "../assets/hero-video.mp4";
@@ -11,11 +12,13 @@ import heroVideo from "../assets/hero-video.mp4";
 function Hero() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
+  const videoRef = useAutoplayVideo();
 
   return (
     <section id="hero" className="hero">
 
       <video
+        ref={videoRef}
         className="hero-video"
         autoPlay
         muted
