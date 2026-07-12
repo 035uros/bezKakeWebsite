@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import {
   FaPhone,
@@ -72,6 +73,8 @@ function Footer() {
 
       <div className="footer-bottom">
         © {new Date().getFullYear()} BezKake. {t.footerRights}
+        {" · "}
+        <Link to="/privatnost">{t.footerPrivacyLink}</Link>
       </div>
 
     </footer>

@@ -259,6 +259,10 @@ function StartPage() {
             </div>
 
           </div>
+
+          <Link to="/privatnost" className="start-privacy-link">
+            {language === "en" ? "Privacy Policy" : "Politika privatnosti"}
+          </Link>
         </div>
       </section>
 

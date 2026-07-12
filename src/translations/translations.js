@@ -266,6 +266,7 @@ export const translations = {
     footerSocial: "@bezkake.rs",
 
     footerRights: "Sva prava zadržana.",
+    footerPrivacyLink: "Politika privatnosti",
     whatsappText: "Piši nam",
     whatsappAria: "Kontaktirajte nas na WhatsApp",
   },
@@ -538,6 +539,7 @@ export const translations = {
     footerSocial: "@bezkake.rs",
 
     footerRights: "All rights reserved.",
+    footerPrivacyLink: "Privacy Policy",
     whatsappText: "Message us",
     whatsappAria: "Contact us on WhatsApp",
   },
