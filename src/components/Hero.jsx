@@ -1,6 +1,10 @@
 import { useContext } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
+import { getWhatsAppLink } from "../lib/whatsapp";
+import { fbStandard } from "../lib/pixel";
+import { useAutoplayVideo } from "../lib/useAutoplayVideo";
 
 import logo from "../assets/logo.png";
 import heroVideo from "../assets/hero-video.mp4";
@@ -8,16 +12,19 @@ import heroVideo from "../assets/hero-video.mp4";
 function Hero() {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
+  const videoRef = useAutoplayVideo();
 
   return (
     <section id="hero" className="hero">
 
       <video
+        ref={videoRef}
         className="hero-video"
         autoPlay
         muted
         loop
         playsInline
+        poster="/og-image.jpg"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
@@ -27,23 +34,27 @@ function Hero() {
       <div className="container hero-content">
         <div className="hero-text">
 
+          <p className="hero-eyebrow">{t.heroEyebrow}</p>
+
           <h1>
             {t.heroTitleLine1}
             <br />
             {t.heroTitleLine2}
           </h1>
 
-          <div className="hero-buttons">
+          <p>{t.heroSubtitle}</p>
 
-            <a href="#kontakt" className="btn btn-primary">
-              {t.heroPrimaryBtn}
-            </a>
+          <a
+            href={getWhatsAppLink(language)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="start-cta-btn"
+            onClick={() => fbStandard("Contact", { content_name: "homepage_hero" })}
+          >
+            <FaWhatsapp /> {t.heroPrimaryBtn}
+          </a>
 
-            <a href="#cenovnik" className="btn btn-secondary-light">
-              {t.heroSecondaryBtn}
-            </a>
-
-          </div>
+          <p className="hero-guarantee">{t.heroNote}</p>
 
         </div>
       </div>

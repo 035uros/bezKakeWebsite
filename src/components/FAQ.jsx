@@ -60,13 +60,6 @@ function FAQ() {
 
         </div>
 
-        <div className="faq-cta">
-          <p>{t.faqCtaText}</p>
-          <a href="#kontakt" className="btn faq-cta-btn">
-            {t.faqCtaButton}
-          </a>
-        </div>
-
       </div>
     </section>
   );

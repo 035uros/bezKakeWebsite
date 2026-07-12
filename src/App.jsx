@@ -1,29 +1,18 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import HowItWorks from "./components/HowItWorks";
-import Benefits from "./components/Benefits";
-import Pricing from "./components/Pricing";
-import Referral from "./components/Referral";
-import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import StartPage from "./pages/StartPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <HowItWorks />
-      <Benefits />
-      <Pricing />
-      <Referral />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <WhatsAppButton />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/start" element={<StartPage />} />
+        <Route path="/privatnost" element={<PrivacyPolicy />} />
+      </Routes>
 
       <ToastContainer
         position="top-right"

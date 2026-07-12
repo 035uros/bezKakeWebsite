@@ -3,9 +3,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import { LanguageContext } from "../context/LanguageContext";
 import { translations } from "../translations/translations";
-
-const PHONE = "381606872772";
-const MESSAGE = encodeURIComponent("Zdravo! Zainteresovan/a sam za BezKake uslugu.");
+import { getWhatsAppLink } from "../lib/whatsapp";
+import { fbStandard } from "../lib/pixel";
 
 function WhatsAppButton() {
   const { language } = useContext(LanguageContext);
@@ -13,11 +12,12 @@ function WhatsAppButton() {
 
   return (
     <a
-      href={`https://wa.me/${PHONE}?text=${MESSAGE}`}
+      href={getWhatsAppLink(language)}
       className="whatsapp-btn"
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t.whatsappAria}
+      onClick={() => fbStandard("Contact", { content_name: "floating_button" })}
     >
       <FaWhatsapp />
       <span>{t.whatsappText}</span>

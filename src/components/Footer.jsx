@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import {
   FaPhone,
@@ -45,7 +46,7 @@ function Footer() {
 
         <p>
           <FaPhone className="footer-icon" />
-          <a href="tel:+{t.footerPhone}">{t.footerPhone}</a>
+          <a href={`tel:${t.footerPhone.replace(/\s+/g, "")}`}>{t.footerPhone}</a>
         </p>
 
         <p>
@@ -58,7 +59,7 @@ function Footer() {
         <p>
           <FaInstagram className="footer-icon" />
           <a
-            href="https://instagram.com/bezkake"
+            href="https://instagram.com/bezkake.rs"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -72,6 +73,8 @@ function Footer() {
 
       <div className="footer-bottom">
         © {new Date().getFullYear()} BezKake. {t.footerRights}
+        {" · "}
+        <Link to="/privatnost">{t.footerPrivacyLink}</Link>
       </div>
 
     </footer>

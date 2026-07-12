@@ -5,16 +5,17 @@ export const translations = {
     faq: "Česta pitanja",
     contact: "Kontakt",
 
+    heroEyebrow: "BezKake · Beograd",
     heroTitleLine1: "Pustite psa da bude pas.",
     heroTitleLine2: "Mi se brinemo o ostatku.",
-    heroPrimaryBtn: "Prva usluga gratis — zakažite odmah",
-    heroSecondaryBtn: "Cenovnik",
+    heroSubtitle:
+      "Redovnim uklanjanjem psećeg izmeta, dvorište ostaje urednije i prijatnije za svakodnevnu igru, boravak i druženje. Dolazimo po rasporedu, tokom cele godine.",
+    heroPrimaryBtn: "Zakažite besplatno prvo čišćenje na WhatsApp",
+    heroNote:
+      "Prvo čišćenje je gratis uz bilo koju mesečnu pretplatu · Niste zadovoljni? Otkazujete, ne plaćate ništa.",
 
     faqTitle: "Česta pitanja",
     faqSubtitle: "Sve što Vas zanima pre prvog poziva, na jednom mestu.",
-
-    faqCtaText: "Niste pronašli odgovor na vaše pitanje?",
-    faqCtaButton: "Pišite nam",
 
     faqCategories: [
       {
@@ -48,6 +49,10 @@ export const translations = {
             q: "Šta radite sa skupljenim izmetom?",
             a: "Prikupljeni otpad stavljamo u dobro zatvorene kese i odlažemo u odgovarajući komunalni kontejner. Otpad ne ostaje u dvorištu, a prostor nakon posete ostaje čist i uredan.",
           },
+          {
+            q: "Da li čistite i jednokratno ili samo po pretplati?",
+            a: "Naša osnovna usluga zasniva se na mesečnim pretplatama, jer redovno održavanje obezbeđuje čisto i uredno dvorište tokom cele godine. Ukoliko Vam je potrebno jednokratno čišćenje, ono je moguće uz posebnu ponudu prilagođenu Vašim potrebama.",
+          },
         ],
       },
       {
@@ -55,11 +60,19 @@ export const translations = {
         items: [
           {
             q: "Kako funkcioniše prva besplatna usluga?",
-            a: "Prva poseta je na naš račun kada odaberete jedan od redovnih paketa i aktivirate mesečnu pretplatu. Nakon prve posete nastavljamo sa redovnim dolascima prema izabranom paketu. Tako odmah upoznajete kvalitet naše usluge, a mi preuzimamo brigu o Vašem dvorištu iz nedelje u nedelju.",
+            a: "Prva poseta je na naš račun kada odaberete jedan od redovnih paketa i aktivirate mesečnu pretplatu. Nakon prve posete nastavljamo sa redovnim dolascima prema izabranom paketu. Tako odmah upoznajete kvalitet naše usluge, a mi preuzimamo brigu o Vašem dvorištu iz nedelje u nedelju. Ukoliko niste zadovoljni iz bilo kog razloga, možete otkazati uslugu u bilo kom trenutku, bez dodatnih troškova.",
           },
           {
             q: "Imam 2 psa, kako se to naplaćuje?",
             a: "Za domaćinstva sa dva psa, na cenu izabranog paketa dodaje se 2.000 RSD mesečno. Za tri ili više pasa pripremamo individualnu ponudu, u skladu sa veličinom dvorišta, učestalošću dolazaka i potrebama domaćinstva.",
+          },
+          {
+            q: "Kada se vrši plaćanje mesečne pretplate?",
+            a: "Plaćanje mesečne pretplate vrši se u periodu od 1. do 10. dana u mesecu.",
+          },
+          {
+            q: "Zašto bih angažovao Vas kada to mogu sam?",
+            a: "Naravno, mnogi vlasnici pasa mogu sami da održavaju svoje dvorište. Naša usluga namenjena je onima koji žele da uštede vreme, izbegnu neprijatan posao i imaju pouzdano, redovno održavanje bez razmišljanja. Kao registrovana firma, dolazimo prema unapred dogovorenom rasporedu i pružamo dosledan kvalitet usluge iz nedelje u nedelju.",
           },
         ],
       },
@@ -69,6 +82,10 @@ export const translations = {
           {
             q: "Mogu li da otkažem uslugu u bilo kom trenutku?",
             a: "Da. Pretplatu možete otkazati u bilo kom trenutku, bez penala i dugoročnih ugovornih obaveza. Dovoljno je da nam pošaljete poruku putem WhatsApp-a. Verujemo da se poverenje i lojalnost zaslužuju kvalitetom svake posete, a ne komplikovanim uslovima.",
+          },
+          {
+            q: "Kako znam da je usluga zaista obavljena?",
+            a: "Čim završimo, šaljemo Vam fotografiju zatvorene kapije kao potvrdu da je posao obavljen, ukoliko niste kod kuće.",
           },
           {
             q: "Šta ako nisam zadovoljan obavljenom uslugom?",
@@ -86,7 +103,7 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Zakažite u par poruka",
-        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate vreme i broj termina (nedeljno ili dvonedeljno). Prvo čišćenje je gratis, bez obaveza.",
+        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate vreme i broj termina (nedeljno ili dvonedeljno). Uz odabir bilo kog paketa, prvo čišćenje je GRATIS! Niste zadovoljni? Možete otkazati uslugu u bilo kom trenutku, bez dodatnih troškova.",
     },
     {
         number: "02",
@@ -233,14 +250,6 @@ export const translations = {
     contactLocationLabel: "Lokacija",
     contactLocation: "Beograd",
 
-    contactNamePlaceholder: "Ime",
-    contactPhonePlaceholder: "Telefon",
-    contactMessagePlaceholder: "Poruka",
-
-    contactButton: "Pošalji upit",
-
-    contactSuccess: "Poruka je uspešno poslata!",
-    contactError: "Greška pri slanju poruke!",
     footerDescription:
     "Profesionalno uklanjanje psećeg izmeta iz privatnih dvorišta.",
 
@@ -257,6 +266,7 @@ export const translations = {
     footerSocial: "@bezkake.rs",
 
     footerRights: "Sva prava zadržana.",
+    footerPrivacyLink: "Politika privatnosti",
     whatsappText: "Piši nam",
     whatsappAria: "Kontaktirajte nas na WhatsApp",
   },
@@ -267,17 +277,18 @@ export const translations = {
     faq: "FAQ",
     contact: "Contact",
 
+    heroEyebrow: "BezKake · Belgrade",
     heroTitleLine1: "Let your dog be a dog.",
     heroTitleLine2: "We take care of the rest.",
-    heroPrimaryBtn: "First service free — book now",
-    heroSecondaryBtn: "Pricing",
+    heroSubtitle:
+      "By regularly removing dog waste, the yard stays tidier and more pleasant for everyday play, spending time outside, and having guests over. We come on a set schedule, all year round.",
+    heroPrimaryBtn: "Book your free first cleaning on WhatsApp",
+    heroNote:
+      "Your first cleaning is free with any monthly subscription · Not satisfied? Cancel, and pay nothing.",
 
     faqTitle: "Frequently Asked Questions",
     faqSubtitle:
       "Everything you want to know before your first call, all in one place.",
-
-    faqCtaText: "Didn't find the answer to your question?",
-    faqCtaButton: "Contact us",
 
     faqCategories: [
     {
@@ -311,6 +322,10 @@ export const translations = {
             q: "What do you do with the collected dog waste?",
             a: "We place all collected waste into securely sealed bags and dispose of it in the appropriate municipal waste container. Nothing is left behind in your yard, leaving it clean and tidy after every visit.",
         },
+        {
+            q: "Do you offer one-time cleanings, or only subscriptions?",
+            a: "Our core service is built around monthly subscriptions, since regular maintenance is what keeps a yard clean and tidy all year round. If you need a one-time cleaning, that's possible too, with a custom offer tailored to your needs.",
+        },
         ],
     },
     {
@@ -318,11 +333,19 @@ export const translations = {
         items: [
         {
             q: "How does the first free service work?",
-            a: "Your first visit is completely free when you choose one of our regular subscription packages. After the first visit, we continue according to your selected schedule. This gives you the opportunity to experience the quality of our service before paying.",
+            a: "Your first visit is on us when you choose one of our regular packages and activate a monthly subscription. After the first visit, we continue with regular visits according to your chosen package. This way you get to experience the quality of our service right away, while we take care of your yard week after week. If you're not satisfied for any reason, you can cancel the service at any time, with no additional costs.",
         },
         {
             q: "I have two dogs. How is the pricing calculated?",
             a: "For households with two dogs, an additional 2,000 RSD per month is added to the selected package. For three or more dogs, we prepare a customized quote based on the size of your yard, the number of visits, and your specific needs.",
+        },
+        {
+            q: "When is the monthly subscription payment due?",
+            a: "The monthly subscription payment is made between the 1st and the 10th day of the month.",
+        },
+        {
+            q: "Why would I hire you when I could do it myself?",
+            a: "Of course, many dog owners are able to maintain their own yard. Our service is meant for those who want to save time, avoid an unpleasant chore, and have reliable, regular maintenance without having to think about it. As a registered company, we come on a pre-agreed schedule and deliver consistent quality week after week.",
         },
         ],
     },
@@ -332,6 +355,10 @@ export const translations = {
         {
             q: "Can I cancel the service at any time?",
             a: "Yes. You can cancel your subscription at any time without penalties or long-term contracts. Simply send us a message via WhatsApp. We believe trust and customer loyalty should be earned through the quality of every visit—not through complicated contracts.",
+        },
+        {
+            q: "How do I know the service was actually completed?",
+            a: "As soon as we finish, we send you a photo of the closed gate as confirmation that the job is done, in case you're not home.",
         },
         {
             q: "What if I'm not satisfied with the service?",
@@ -349,7 +376,7 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Book in a few messages",
-        text: "Message or call us. We respond within an hour. You choose schedule and frequency (weekly or bi-weekly). First cleaning is free, no commitment.",
+        text: "Message or call us. We respond within an hour at the latest. You choose the time and how often we come (weekly or bi-weekly). With any package, the first cleaning is FREE! Not satisfied? You can cancel the service at any time, with no additional costs.",
     },
     {
         number: "02",
@@ -496,14 +523,6 @@ export const translations = {
     contactLocationLabel: "Location",
     contactLocation: "Belgrade",
 
-    contactNamePlaceholder: "Name",
-    contactPhonePlaceholder: "Phone",
-    contactMessagePlaceholder: "Message",
-
-    contactButton: "Send inquiry",
-
-    contactSuccess: "Message sent successfully!",
-    contactError: "Error sending message!",
     footerDescription:
     "Professional dog waste removal from private yards.",
 
@@ -520,6 +539,7 @@ export const translations = {
     footerSocial: "@bezkake.rs",
 
     footerRights: "All rights reserved.",
+    footerPrivacyLink: "Privacy Policy",
     whatsappText: "Message us",
     whatsappAria: "Contact us on WhatsApp",
   },
