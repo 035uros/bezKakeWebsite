@@ -24,6 +24,7 @@ function Hero() {
         muted
         loop
         playsInline
+        poster="/og-image.jpg"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>

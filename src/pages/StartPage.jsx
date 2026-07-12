@@ -81,7 +81,15 @@ function StartPage() {
           so cold ad traffic gets message-matched, qualified, and
           routed to the right package before they chat. */}
       <section className="start-hero">
-        <video ref={videoRef} className="start-hero-video" autoPlay muted loop playsInline>
+        <video
+          ref={videoRef}
+          className="start-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/og-image.jpg"
+        >
           <source src={heroVideo} type="video/mp4" />
         </video>
 
