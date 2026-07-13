@@ -51,7 +51,7 @@ function Footer() {
 
         <p>
           <FaEnvelope className="footer-icon" />
-          <a href="mailto:kontakt@bezkake.rs">
+          <a href={`mailto:${t.footerEmail}`}>
             {t.footerEmail}
           </a>
         </p>
