@@ -37,6 +37,112 @@
     />
     <meta name="twitter:image" content="https://bezkake.rs/og-image.jpg" />
 
+    <!-- LocalBusiness structured data (JSON-LD).
+         SPA note: lives in the single index.html, so /start inherits it too.
+         TODO once available: add the Google Business Profile maps URL and any
+         verified Facebook/TikTok profile URLs into "sameAs" below. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://bezkake.rs/#business",
+      "name": "BezKake",
+      "alternateName": "BezKake Beograd",
+      "description": "Prva specijalizovana usluga čišćenja dvorišta od psećeg izmeta u Beogradu. Pretplatnički paketi sa redovnim dolascima — čistimo, odnosimo otpad i šaljemo foto-izveštaj posle svake posete.",
+      "url": "https://bezkake.rs",
+      "logo": "https://bezkake.rs/logo.png",
+      "image": "https://bezkake.rs/og-image.jpg",
+      "telephone": "+381606872772",
+      "email": "bezkake@gmail.com",
+      "priceRange": "4.999–9.999 RSD",
+      "currenciesAccepted": "RSD",
+      "paymentAccepted": "Bank transfer",
+      "areaServed": {
+        "@type": "City",
+        "name": "Beograd",
+        "sameAs": "https://sr.wikipedia.org/wiki/Београд"
+      },
+      "serviceType": "čišćenje dvorišta od psećeg izmeta",
+      "knowsLanguage": "sr",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/bezkake.rs"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pretplatnički paketi",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "description": "Čišćenje dvorišta na dve nedelje, sa foto-izveštajem posle svake posete.",
+            "price": "4999",
+            "priceCurrency": "RSD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "4999",
+              "priceCurrency": "RSD",
+              "unitText": "mesečno"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Čišćenje dvorišta — dvonedeljno",
+              "areaServed": "Beograd"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Standard",
+            "description": "Čišćenje dvorišta svake nedelje, po kiši i po snegu, sa foto-izveštajem posle svake posete.",
+            "price": "5999",
+            "priceCurrency": "RSD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "5999",
+              "priceCurrency": "RSD",
+              "unitText": "mesečno"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Čišćenje dvorišta — nedeljno",
+              "areaServed": "Beograd"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium",
+            "description": "Prošireno čišćenje — 8 dolazaka mesečno, za veća dvorišta i više pasa.",
+            "price": "9999",
+            "priceCurrency": "RSD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "9999",
+              "priceCurrency": "RSD",
+              "unitText": "mesečno"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Čišćenje dvorišta — premium",
+              "areaServed": "Beograd"
+            }
+          }
+        ]
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Besplatno prvo čišćenje",
+        "description": "Prvo čišćenje gratis uz svaku pretplatu. Ako niste zadovoljni posle prvog čišćenja, otkazujete bez naplate."
+      }
+    }
+    </script>
+
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
