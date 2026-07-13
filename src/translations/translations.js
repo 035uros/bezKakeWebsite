@@ -535,7 +535,7 @@ export const translations = {
 
     footerLocation: "Belgrade",
     footerPhone: "+381 60 6872772",
-    footerEmail: "bezkake@gmail.coms",
+    footerEmail: "bezkake@gmail.com",
     footerSocial: "@bezkake.rs",
 
     footerRights: "All rights reserved.",
