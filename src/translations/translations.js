@@ -103,7 +103,7 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Zakažite u par poruka",
-        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate vreme i broj termina (nedeljno ili dvonedeljno). Uz odabir bilo kog paketa, prvo čišćenje je GRATIS! Niste zadovoljni? Možete otkazati uslugu u bilo kom trenutku, bez dodatnih troškova.",
+        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate paket, a tačan termin zajedno dogovaramo u skladu sa rasporedom obilaska Vašeg kraja. Uz odabir bilo kog paketa, prvo čišćenje je GRATIS! Niste zadovoljni? Možete otkazati uslugu u bilo kom trenutku, bez dodatnih troškova.",
     },
     {
         number: "02",
@@ -376,7 +376,7 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Book in a few messages",
-        text: "Message or call us. We respond within an hour at the latest. You choose the time and how often we come (weekly or bi-weekly). With any package, the first cleaning is FREE! Not satisfied? You can cancel the service at any time, with no additional costs.",
+        text: "Message or call us. We respond within an hour at the latest. You choose the package, and we arrange the exact time together, based on the visit schedule for your area. With any package, the first cleaning is FREE! Not satisfied? You can cancel the service at any time, with no additional costs.",
     },
     {
         number: "02",
