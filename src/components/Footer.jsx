@@ -16,7 +16,7 @@ function Footer() {
   const t = translations[language];
 
   return (
-    <footer className="footer">
+    <footer id="kontakt" className="footer">
 
       <div className="container footer-content">
 
