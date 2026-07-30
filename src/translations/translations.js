@@ -23,7 +23,7 @@ export const translations = {
         items: [
           {
             q: "Da li moram biti kod kuće tokom čišćenja?",
-            a: "Tokom prvih nekoliko poseta potrebno je da budete kod kuće ili da nam na drugi način omogućite pristup dvorištu. Kada se upoznamo sa prostorom i uspostavimo poverenje, možemo dogovoriti stalan način pristupa, tako da Vaše prisustvo više ne bude neophodno. Ako je do dvorišta moguće doći samo kroz kuću, potrebno je da neko bude prisutan tokom dolaska. Posete obavljamo dogovorenog dana, u okviru unapred definisanog vremenskog intervala. Pre dolaska šaljemo WhatsApp obaveštenje.",
+            a: "Tokom prvih nekoliko poseta potrebno je da budete kod kuće ili da nam na drugi način omogućite pristup dvorištu. Kada se upoznamo sa prostorom i uspostavimo poverenje, možemo dogovoriti stalan način pristupa, tako da Vaše prisustvo više ne bude neophodno. Ako je do dvorišta moguće doći samo kroz kuću, potrebno je da neko bude prisutan tokom dolaska. Na dogovoreni dan dolaska, 15 minuta pre nego što stignemo, šaljemo Vam poruku na WhatsApp.",
           },
           {
             q: "Koje delove dvorišta čistite?",
@@ -39,7 +39,7 @@ export const translations = {
           },
           {
             q: "Da li pas može da bude u dvorištu tokom čišćenja?",
-            a: "I sami smo vlasnici pasa i iskreni ljubitelji životinja. Ipak, radi bezbednosti Vašeg psa i našeg tima, molimo Vas da tokom čišćenja bude u kući ili u odvojenom, bezbednom delu dvorišta. Ovo pravilo važi za sve pse, kako bismo posao mogli da obavimo temeljno i bez ometanja. Pre dolaska šaljemo WhatsApp obaveštenje kako biste imali dovoljno vremena da ga sklonite.",
+            a: "I sami smo vlasnici pasa i iskreni ljubitelji životinja. Ipak, radi bezbednosti Vašeg psa i našeg tima, molimo Vas da tokom čišćenja bude u kući ili u odvojenom, bezbednom delu dvorišta. Ovo pravilo važi za sve pse, kako bismo posao mogli da obavimo temeljno i bez ometanja. 15 minuta pre dolaska šaljemo WhatsApp obaveštenje kako biste imali dovoljno vremena da ga sklonite.",
           },
           {
             q: "Koliko vremena traje jedno čišćenje?",
@@ -103,13 +103,13 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Zakažite u par poruka",
-        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate paket, a tačan termin zajedno dogovaramo u skladu sa rasporedom obilaska Vašeg kraja. Uz odabir bilo kog paketa, prvo čišćenje je GRATIS! Niste zadovoljni? Možete otkazati uslugu u bilo kom trenutku, bez dodatnih troškova.",
+        text: "Pišite nam ili nas pozovite. Odgovaramo najkasnije u roku od sat vremena. Vi birate paket, a dan dolaska zajedno dogovaramo u skladu sa rasporedom obilaska Vašeg kraja. Uz odabir bilo kog paketa, prvo čišćenje je gratis! Niste zadovoljni? Uslugu možete otkazati u bilo kom trenutku, bez dodatnih troškova.",
     },
     {
         number: "02",
         icon: "notify",
         title: "Obaveštavamo Vas pre dolaska",
-        text: "Uoči svakog dolaska šaljemo Vam poruku. Naš tim dolazi u dogovorenom terminu.",
+        text: "Na dogovoreni dan dolaska, 15 minuta pre nego što stignemo, šaljemo Vam poruku na WhatsApp. Nije potrebno da budete kod kuće ukoliko nam je pristup dvorištu omogućen.",
     },
     {
         number: "03",
@@ -296,7 +296,7 @@ export const translations = {
         items: [
         {
             q: "Do I need to be home during the cleaning?",
-            a: "During the first few visits, you need to be home or provide access to the yard. Once we establish trust, we can arrange permanent access so your presence is no longer required. If access is only possible through the house, someone must be present. We always notify you via WhatsApp before arrival.",
+            a: "During the first few visits, you need to be home or provide access to the yard. Once we establish trust, we can arrange permanent access so your presence is no longer required. If access is only possible through the house, someone must be present. On the agreed day of the visit, 15 minutes before we arrive, we send you a WhatsApp message.",
         },
         {
             q: "Which parts of the yard do you clean?",
@@ -312,7 +312,7 @@ export const translations = {
         },
         {
             q: "Can my dog stay in the yard during the cleaning?",
-            a: "We are dog owners and genuine animal lovers ourselves. However, for the safety of both your dog and our team, we kindly ask that your dog remains inside the house or in a separate secure area of the yard during the cleaning. This policy applies to all dogs so we can work thoroughly and safely. We always send you a WhatsApp notification before arrival so you'll have enough time to prepare.",
+            a: "We are dog owners and genuine animal lovers ourselves. However, for the safety of both your dog and our team, we kindly ask that your dog remains inside the house or in a separate secure area of the yard during the cleaning. This policy applies to all dogs so we can work thoroughly and safely. We send you a WhatsApp notification 15 minutes before arrival so you'll have enough time to prepare.",
         },
         {
             q: "How long does a typical cleaning take?",
@@ -376,13 +376,13 @@ export const translations = {
         number: "01",
         icon: "whatsapp",
         title: "Book in a few messages",
-        text: "Message or call us. We respond within an hour at the latest. You choose the package, and we arrange the exact time together, based on the visit schedule for your area. With any package, the first cleaning is FREE! Not satisfied? You can cancel the service at any time, with no additional costs.",
+        text: "Message or call us. We respond within an hour at the latest. You choose the package, and we arrange the day of the visit together, based on the visit schedule for your area. With any package, the first cleaning is free! Not satisfied? You can cancel the service at any time, with no additional costs.",
     },
     {
         number: "02",
         icon: "notify",
         title: "We notify you before arrival",
-        text: "Before each visit, we send you a message. Our team arrives at the agreed time.",
+        text: "On the agreed day of the visit, 15 minutes before we arrive, we send you a WhatsApp message. You don't need to be home, as long as we have access to the yard.",
     },
     {
         number: "03",
