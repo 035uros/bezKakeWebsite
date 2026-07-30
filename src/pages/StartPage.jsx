@@ -249,7 +249,11 @@ function StartPage() {
               <FaPhone />
               <div>
                 <h4>{t.contactPhoneLabel}</h4>
-                <p>{t.contactPhone}</p>
+                <p>
+                  <a href={`tel:${t.contactPhone.replace(/\s+/g, "")}`}>
+                    {t.contactPhone}
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -257,7 +261,9 @@ function StartPage() {
               <FaEnvelope />
               <div>
                 <h4>{t.contactEmailLabel}</h4>
-                <p>{t.contactEmail}</p>
+                <p>
+                  <a href={`mailto:${t.contactEmail}`}>{t.contactEmail}</a>
+                </p>
               </div>
             </div>
 
