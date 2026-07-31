@@ -85,11 +85,7 @@ export const translations = {
           },
           {
             q: "Kako znam da je usluga zaista obavljena?",
-            a: "Čim završimo, šaljemo Vam fotografiju zatvorene kapije kao potvrdu da je posao obavljen, ukoliko niste kod kuće.",
-          },
-          {
-            q: "Šta ako nisam zadovoljan obavljenom uslugom?",
-            a: "Stojimo iza kvaliteta naše usluge. Ukoliko niste zadovoljni, ponovićemo posetu o našem trošku ili Vam vratiti novac.",
+            a: "Čim završimo, šaljemo Vam fotografiju zatvorene kapije kao potvrdu da je čišćenje završeno.",
           },
         ],
       },
@@ -121,7 +117,7 @@ export const translations = {
         number: "04",
         icon: "photo",
         title: "Foto potvrda odmah po završetku",
-        text: "Čim završimo, šaljemo Vam fotografiju zatvorene kapije kao potvrdu da je posao obavljen, ukoliko niste kod kuće. Stojimo iza kvaliteta naše usluge. Ukoliko niste zadovoljni, ponovićemo posetu o našem trošku ili Vam vratiti novac.",
+        text: "Čim završimo, šaljemo Vam fotografiju zatvorene kapije kao potvrdu da je čišćenje završeno.",
     },
     ],
     benefitsTitle: "Zašto BezKake?",
@@ -141,8 +137,8 @@ export const translations = {
     },
     {
         icon: "warning",
-        title: "Pseći izmet je zdravstveni rizik",
-        text: "Sadrži E. coli, parvovirus i parazite koji opstaju u tlu i do godinu dana. Redovnim uklanjanjem štitite decu, goste i Vašeg psa. Naša oprema se dezinfikuje pre i posle svakog dolaska.",
+        title: "Pseći izmet može predstavljati zdravstveni rizik",
+        text: "Pseći izmet može sadržati potencijalno štetne bakterije, viruse i parazite. Neki od njih mogu opstati u zemljištu mesecima, pa čak i do godinu dana. Redovnim uklanjanjem izmeta štitite decu, goste i Vašeg psa. Svu opremu dezinfikujemo pre i posle svakog dolaska.",
     },
     {
         icon: "notify",
@@ -358,11 +354,7 @@ export const translations = {
         },
         {
             q: "How do I know the service was actually completed?",
-            a: "As soon as we finish, we send you a photo of the closed gate as confirmation that the job is done, in case you're not home.",
-        },
-        {
-            q: "What if I'm not satisfied with the service?",
-            a: "We stand behind the quality of our work. If you're not satisfied, we'll repeat the visit at our expense or give you a full refund.",
+            a: "As soon as we finish, we send you a photo of the closed gate as confirmation that the cleaning is complete.",
         },
         ],
     },
@@ -394,7 +386,7 @@ export const translations = {
         number: "04",
         icon: "photo",
         title: "Photo confirmation after completion",
-        text: "After finishing, we send a photo of the closed gate as proof of completion if you’re not home. We stand behind our service. If you're not satisfied, we’ll redo the visit or refund you.",
+        text: "As soon as we finish, we send you a photo of the closed gate as confirmation that the cleaning is complete.",
     },
     ],
     benefitsTitle: "Why BezKake?",
@@ -414,8 +406,8 @@ export const translations = {
     },
     {
         icon: "warning",
-        title: "Dog waste is a health risk",
-        text: "It contains E. coli, parvovirus and parasites that can survive in soil for up to a year. Regular removal protects children, guests and your dog.",
+        title: "Dog waste can be a health risk",
+        text: "Dog waste can contain potentially harmful bacteria, viruses and parasites. Some of them can survive in the soil for months, even up to a year. Regular removal protects your children, guests and your dog. We disinfect all our equipment before and after every visit.",
     },
     {
         icon: "notify",
